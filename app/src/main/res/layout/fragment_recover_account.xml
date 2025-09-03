@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:textAlignment="center"
-                android:text="Digite seu e-mail registrado e receba                                     o link para criar uma nova senha."
+                android:text="Digite seu e-mail registrado e receba                                              o link para criar uma nova senha."
                 android:textColor="@color/black"/>
 
             <TextView

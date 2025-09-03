@@ -3,8 +3,8 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_default">#DB7DD6</color>
-    <color name="color_delete">#FF1500</color>
+    <color name="color_delete">#FD0421</color>
     <color name="color_details">#9C27B0</color>
-    <color name="color_status_todo">#FC470C</color>
-    <color name="color_status_done">#E91E63</color>
+    <color name="color_status_todo">#FF9800</color>
+    <color name="color_status_done">#4CAF50</color>
 </resources>
