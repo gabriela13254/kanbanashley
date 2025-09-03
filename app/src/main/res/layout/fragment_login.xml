@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email_text"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/passord_text"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/editTextSenha"
@@ -71,7 +71,7 @@
                 android:layout_weight="1"
                 android:text="@string/text_button_register_login_fragment"
                 android:textAlignment="textStart"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/textViewRecuperarConta"
@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:text="@string/text_button_recover_login_fragment"
                 android:textAlignment="textEnd"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <ProgressBar
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:indeterminateTint="@color/white"
+            android:indeterminateTint="@color/black"
             android:visibility="invisible"
             tools:visibility="visible" />
     </LinearLayout>
@@ -98,12 +98,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ashley Gabriela Ribeiro Jesus"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.115" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

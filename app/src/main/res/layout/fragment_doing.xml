@@ -7,23 +7,25 @@
     tools:context=".ui.DoingFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTask"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/recyclerViewTask"
-        tools:listitem="@layout/item_task"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_task" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="#DB7DD6"
         android:contentDescription="Add task"
-        android:tint="#009688"
+        android:tint="#9E11E0"
         android:clickable="true"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintBottom_toBottomOf="parent"

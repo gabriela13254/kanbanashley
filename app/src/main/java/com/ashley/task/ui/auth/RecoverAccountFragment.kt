@@ -38,7 +38,7 @@ class RecoverAccountFragment : Fragment() {
     private fun valideData(){
         val email = binding.editTextEmail.text.toString().trim()
         if(email.isNotBlank()){
-            Toast.makeText(requireContext(),"Tudo OK!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(),"Perfeito!", Toast.LENGTH_SHORT).show()
         }else{
             showBottomSheet(message = getString(R.string.email_empty))
         }

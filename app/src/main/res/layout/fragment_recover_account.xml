@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/text_title_toolbar_recover_account_fragment"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_gravity="center_horizontal" />
 
         </com.google.android.material.appbar.MaterialToolbar>
@@ -49,15 +49,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:textAlignment="center"
-                android:text="@string/text_info_recover_account_fragment"
-                android:textColor="@color/white"/>
+                android:text="Digite seu e-mail registrado e receba                                     o link para criar uma nova senha."
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/textviewEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/email_text"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginTop="24dp"/>
 
             <EditText
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:indeterminateTint="@color/white"
+                android:indeterminateTint="@color/black"
                 android:layout_marginTop="8dp"
                 android:visibility="invisible"
                 tools:visibility="visible"/>
