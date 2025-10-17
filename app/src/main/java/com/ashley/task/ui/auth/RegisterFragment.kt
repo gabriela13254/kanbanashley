@@ -5,16 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.ashley.task.R
 import com.ashley.task.databinding.FragmentRegisterBinding
 import com.ashley.task.util.initToolbar
 import com.ashley.task.util.showBottomSheet
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -49,6 +53,25 @@ class RegisterFragment : Fragment() {
             }
         }else{
             showBottomSheet(message = getString(R.string.email_empty_register_fragment))
+        }
+    }
+
+    private fun registerUser(email: String ,password: String) {
+        try {
+            val auth = FirebaseAuth.getInstance()
+
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    findNavController().navigate(R.id.action_global_homeFragment)
+                } else {
+                    Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }catch ( e: Exception){
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 

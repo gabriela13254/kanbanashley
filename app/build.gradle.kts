@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-parcelize")
-    id("com.google.gms.google-servises")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -53,5 +53,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(platform("com.google.firebase:firebase-bom:34.1.0"))
-    implementation("com.google.firebase:fiebase-auth")
+    implementation("com.google.firebase:firebase-auth")
 }
