@@ -19,6 +19,10 @@
     <string name="text_button_register_login_fragment">Criar conta</string>
     <string name="text_button_recover_login_fragment">Recuperar conta</string>
 
+    <string name="text_title_dialog_confira_logout">Deseja sair da sua conta?</string>
+    <string name="text_button_confirm_logout">Confirmar</string>
+    <string name="text_message_dialog_comfirm_logout">Aperte em confirmar para sair da sua conta</string>
+
     <string name="email_empty_register_fragment">Insira um e-mail válido.</string>
     <string name="password_empty_register_gragment">Insira uma senha.</string>
     <string name="text_button_register_fragment">Enviar</string>
