@@ -14,6 +14,7 @@
     <string name="passord_text">Senha</string>
     <string name="email_empty">Insira seu email!</string>
     <string name="email_text">E-mail</string>
+    <string name="error_generic">Erro!!! Tente novamente mais tarde, Por favor.</string>
 
     <string name="text_title_login_fragment">Login</string>
     <string name="text_button_register_login_fragment">Criar conta</string>
@@ -43,4 +44,8 @@
     <string name="feita_radiobutton">Feita</string>
     <string name="text_button_formtask_fragment">Salvar</string>
     <string name="text_button_registeraccount_fragment">Criar conta</string>
+
+
+    <string name="description_empty_fone_task_fragment">Insira uma descrição!</string>
+    <string name="text_save_sucess_form_task_fragment">Parabéns! Sua tarefa foi salva</string>
 </resources>

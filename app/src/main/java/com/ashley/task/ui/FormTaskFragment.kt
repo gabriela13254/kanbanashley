@@ -17,6 +17,10 @@ import com.ashley.task.util.showBottomSheet
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import java.lang.ref.Reference
+import com.google.firebase.Firebase
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.database
+
 
 class FormTaskFragment : Fragment() {
     private var _binding: FragmentFormTaskBinding? = null
@@ -53,12 +57,28 @@ class FormTaskFragment : Fragment() {
         binding.buttonSave.setOnClickListener {
             valideData()
         }
+
+        binding.radioGroup.setOnClickListener { _, id-> status =
+            when(id){
+                R.id.rdTodo -> Status.TODO
+                R.id.rdDoing -> Status.TODO
+                else -> Status.TODO
+            }
+        }
     }
 
     private fun valideData(){
         val description = binding.editTextDescricao.text.toString().trim()
         if (description.isNotBlank()){
-            Toast.makeText(requireContext(),"Perfeito!", Toast.LENGTH_SHORT).show()
+
+            binding.progressBar.isVisible = true
+
+            if (newTask) task = Task()
+            task.id = reference.database.reference.push().key ?: ""
+            task.description = description
+            task.status = status
+
+            saveTask()
         }else{
             showBottomSheet(message = getString(R.string.description_empty_form_task_fragment))
         }
