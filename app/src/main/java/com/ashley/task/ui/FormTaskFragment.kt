@@ -58,11 +58,11 @@ class FormTaskFragment : Fragment() {
             valideData()
         }
 
-        binding.radioGroup.setOnClickListener { _, id-> status =
+        binding.radioGroup.setOnCheckedChangeListener { _, id-> status =
             when(id){
-                R.id.rdTodo -> Status.TODO
-                R.id.rdDoing -> Status.TODO
-                else -> Status.TODO
+                R.id.rbTodo -> Status.TODO
+                R.id.rbDoing -> Status.DOING
+                else -> Status.DONE
             }
         }
     }
@@ -73,12 +73,14 @@ class FormTaskFragment : Fragment() {
 
             binding.progressBar.isVisible = true
 
-            if (newTask) task = Task()
-            task.id = reference.database.reference.push().key ?: ""
-            task.description = description
-            task.status = status
+            if (newTask) {
+                val id = reference.database.reference.push().key ?: ""
+                val description = description
+                val status = status
+                task = Task(id, description, status)
 
-            saveTask()
+                saveTask()
+            }
         }else{
             showBottomSheet(message = getString(R.string.description_empty_form_task_fragment))
         }
